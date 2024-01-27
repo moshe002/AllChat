@@ -10,7 +10,7 @@ function ChatPage() {
   //useEffect(() => { translateText() }, [])
     
   // https://655.mtis.workers.dev/translate?text=Hello,%20How%20are%20you?&source_lang=en&target_lang=ja  
-  const translateText = async () => {
+  const translateText = async () => { // FETCHES DATA FROM BACKEND
     try{
     await fetch(`http://localhost:3001/chat`)
       .then(res => res.json())
@@ -19,6 +19,14 @@ function ChatPage() {
       console.error(error);
     }
   }
+
+  /*
+    languages:
+    english: en
+    japanese: ja
+    german: de
+    korean: ko
+  */
 
   return (
     <div className='flex flex-row'>
