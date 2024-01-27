@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Signup from "./pages/signup-page"
-import Chat from './pages/chat-page'
+import SignupPage from "./pages/signup-page"
+import ChatPage from './pages/chat-page'
 
 function App() {
 
@@ -14,8 +14,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={ <Signup /> } />
-        <Route path="/chat" element={ <Chat /> } />
+        <Route path="/" element={ <SignupPage /> } />
+        <Route path="/chat" element={ <ChatPage /> } />
       </Routes>
     </BrowserRouter>
   )

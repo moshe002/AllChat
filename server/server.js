@@ -20,3 +20,4 @@ app.listen(port, () => {
 });
 
 // node server.js
+// npm start

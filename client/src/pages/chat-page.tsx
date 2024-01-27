@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 
-function Chat() {
+import Sidebar from '../components/sidebar';
+import Chat from '../components/chat';
+
+function ChatPage() {
 
   const [text, setText] = useState<string>('');
 
-  useEffect(() => { translateText() }, [])
+  //useEffect(() => { translateText() }, [])
     
   // https://655.mtis.workers.dev/translate?text=Hello,%20How%20are%20you?&source_lang=en&target_lang=ja  
   const translateText = async () => {
@@ -18,12 +21,11 @@ function Chat() {
   }
 
   return (
-    <div>
-      <div>
-        <input type="text" placeholder="Type your message here..." />
-      </div>
+    <div className='flex flex-row'>
+      <Sidebar />
+      <Chat />
     </div>
   )
 }
 
-export default Chat
+export default ChatPage
