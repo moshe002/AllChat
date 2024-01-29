@@ -17,6 +17,7 @@ function Chat() {
 
   // https://655.mtis.workers.dev/translate?text=Hello,%20How%20are%20you?&source_lang=en&target_lang=ja  
   const translateText = async () => { // FETCHES DATA FROM BACKEND
+    if(message === '' || message === " ") console.error('empty field')
     setLoadingText(true)
 
     socket.emit("chosen_language", { language: chosenLanguage, message: message });
