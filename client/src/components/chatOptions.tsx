@@ -6,12 +6,13 @@ type ChosenLanguageProps = {
 function ChatOptions({ setChosenLanguage }: ChosenLanguageProps) {
   return (
     <div className="text-sm">
-        <label htmlFor="languages">Language to send:</label>
+        <label htmlFor="languages">Translation:</label>
             <select onChange={e => setChosenLanguage(e.target.value)} className="outline-none" name="languages" id="languages">
                 <option value="en">English</option>
                 <option value="ja">Japanese</option>
                 <option value="ko">Korean</option>
                 <option value="de">German</option>
+                <option value="fr">French</option>
             </select>
     </div>
   )
