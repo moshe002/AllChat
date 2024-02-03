@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import ChatOptions from "./chatOptions"
 
 type ChatProps = {
@@ -7,12 +5,18 @@ type ChatProps = {
   message: string;
   setMessage: React.Dispatch<React.SetStateAction<string>>;
   setChosenLanguage: React.Dispatch<React.SetStateAction<string>>;
+  characterLength: number;
+  setCharacterLength: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function ChatBottomSection({ translateText, message, setMessage, setChosenLanguage }: ChatProps) {
-  
-  const [characterLength, setCharacterLength] = useState<number>(0);
-  
+function ChatBottomSection({ 
+  translateText, 
+  message, 
+  setMessage, 
+  setChosenLanguage, 
+  characterLength,
+  setCharacterLength }: ChatProps) {
+    
   return (
     <div className='flex h-[10%] w-full p-7 gap-10 items-center border-t-2 border-slate-400'>
       <ChatOptions setChosenLanguage={setChosenLanguage} />

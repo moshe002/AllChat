@@ -32,6 +32,11 @@ io.on("connection", (socket) => {
         console.log(data);
         translationData = data;
     })
+
+    socket.on("translated_message", (data) => {
+        console.log(data);
+        socket.broadcast.emit("received_message", data.translatedMessage);
+    })
 });
 
 // fetches from api
